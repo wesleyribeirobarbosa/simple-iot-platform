@@ -1,0 +1,6 @@
+/* Camada base do Tailwind já está no index.css; aqui ficam utilitários locais. */
+.App {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    /* tailwind: slate-50 */
+}

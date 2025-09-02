@@ -82,7 +82,7 @@ const Users = ({ user }) => {
 
     // BUG 3: Função que não trata erros adequadamente
     const handleDeleteUser = async (userId) => {
-        if (!confirm('Tem certeza que deseja deletar este usuário?')) return;
+        if (!window.confirm('Tem certeza que deseja deletar este usuário?')) return;
 
         try {
             const token = localStorage.getItem('token');
@@ -179,8 +179,8 @@ const Users = ({ user }) => {
                                         <div className="flex items-center">
                                             <Shield className="h-4 w-4 text-gray-400 mr-2" />
                                             <span className={`px-2 py-1 text-xs font-medium rounded-full ${userItem.role === 'admin'
-                                                    ? 'bg-red-100 text-red-800'
-                                                    : 'bg-green-100 text-green-800'
+                                                ? 'bg-red-100 text-red-800'
+                                                : 'bg-green-100 text-green-800'
                                                 }`}>
                                                 {userItem.role}
                                             </span>
